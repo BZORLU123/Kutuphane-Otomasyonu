@@ -1,0 +1,29 @@
+﻿<Window x:Class="girisii.UyeOl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStyle="None"
+        xmlns:local="clr-namespace:girisii"
+        mc:Ignorable="d"
+        Title="UyeOl" Height="722.571" Width="457.357" Icon="icons/literature.png">
+    <Grid Background="#FF4B357D">
+        <Border Margin="15" MinWidth="400" Background="White" VerticalAlignment="Center" Padding="30" CornerRadius="10" MaxWidth="800">
+            <StackPanel>
+            <TextBlock Text="Üye Ol" Foreground="Black" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+            <Grid Margin="0 0 0 20">
+                <Button Content="Çıkış" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFlatButton}" VerticalAlignment="Top" Click="Button_Click"/>
+            </Grid>
+            <TextBox x:Name="ad" materialDesign:HintAssist.Hint="Ad" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
+            <TextBox x:Name="Soyad" materialDesign:HintAssist.Hint="Soyad" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
+            <TextBox x:Name="Telefon" materialDesign:HintAssist.Hint="Telefon" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" PreviewTextInput="Telefon_PreviewTextInput"/>
+            <TextBox x:Name="Eposta" materialDesign:HintAssist.Hint="E-Posta" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
+            <TextBox x:Name="Adres" materialDesign:HintAssist.Hint="Adres" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
+            <TextBox x:Name="Kullanıcı" materialDesign:HintAssist.Hint="Kullanıcı Adı" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBox x:Name="Sıfre" materialDesign:HintAssist.Hint="Şifre" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
+            <Button Content="Üye Ol" Margin="0 20" Click="Button_Click_1"/>
+        </StackPanel>
+        </Border>
+    </Grid>
+</Window>

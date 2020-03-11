@@ -1,0 +1,12 @@
+C:\Users\batuh\Desktop\DAT\obj\Debug\DAT.csprojAssemblyReference.cache
+C:\Users\batuh\Desktop\DAT\obj\Debug\DAT.csproj.CoreCompileInputs.cache
+C:\Users\batuh\Desktop\DAT\bin\Debug\DAT.dll
+C:\Users\batuh\Desktop\DAT\bin\Debug\DAT.pdb
+C:\Users\batuh\Desktop\DAT\obj\Debug\DAT.dll
+C:\Users\batuh\Desktop\DAT\obj\Debug\DAT.pdb
+D:\DAT\obj\Debug\DAT.csprojResolveAssemblyReference.cache
+C:\Users\B2_5\Desktop\DAT\obj\Debug\DAT.csprojResolveAssemblyReference.cache
+C:\Users\B2_5\Desktop\DAT\bin\Debug\DAT.dll
+C:\Users\B2_5\Desktop\DAT\bin\Debug\DAT.pdb
+C:\Users\B2_5\Desktop\DAT\obj\Debug\DAT.dll
+C:\Users\B2_5\Desktop\DAT\obj\Debug\DAT.pdb

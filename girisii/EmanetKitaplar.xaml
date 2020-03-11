@@ -1,0 +1,168 @@
+﻿<Window x:Class="girisii.EmanetKitaplar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:girisii"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Title="EmanetKitaplar" Height="600" Width="950" Icon="icons/literature.png">
+    <Window.Resources>
+        <Style x:Key="DaireButoniptal" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse x:Name="Butondaire" Width="55" Height="55" Fill="White" Stroke="White" />
+                            <Image Source="icons/magnifying-glass-1778413-1515680.png" Width="33" Height="auto" ToolTip="verilmiş Kitaplar"/>
+
+                            <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Butondaire" Property="Width" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Height" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Fill" Value="#FFFAFAFA"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DaireButon" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse x:Name="Butondaire" Width="55" Height="55" Fill="White" Stroke="White" />
+                            <Image Source="icons/ajanda.png" Width="33" Height="auto" ToolTip="Süreyi Uzat"/>
+
+                            <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Butondaire" Property="Width" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Height" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Fill" Value="#FFFAFAFA"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="Daire" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse x:Name="Butondaire" Width="55" Height="55" Fill="White" Stroke="White" />
+                            <Image Source="icons/booka.png" Width="33" Height="auto" ToolTip="Emaneti Al"/>
+                            <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Butondaire" Property="Width" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Height" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Fill" Value="#FFFAFAFA"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="EmanetVer" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse x:Name="Butondaire" Width="55" Height="55" Fill="White" Stroke="White" />
+                            <Image Source="icons/img_353649.png" Width="33" Height="auto" ToolTip="Emanet ver"/>
+                            <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Butondaire" Property="Width" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Height" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Fill" Value="#FFFAFAFA"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="printer" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse x:Name="Butondaire" Width="55" Height="55" Fill="White" Stroke="White" />
+                            <Image Source="icons/printer.png" Width="33" Height="auto" ToolTip="Yazdır"/>
+                            <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Butondaire" Property="Width" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Height" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Fill" Value="#FFFAFAFA"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="close" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse x:Name="Butondaire" Width="55" Height="55" Fill="White" Stroke="White" />
+                            <Image Source="icons/closedd.png" Width="33" Height="auto" ToolTip="Çıkış"/>
+                            <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Butondaire" Property="Width" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Height" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Fill" Value="#FFFAFAFA"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#FF4B357D">
+        <Border CornerRadius="20" Margin="20" Background="#FF23202B">
+        </Border>
+        <TextBlock HorizontalAlignment="Left" Margin="46,83,0,0" TextWrapping="Wrap" Text="Telefon NO" Foreground="White" FontSize="20" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="46,45,0,0" TextWrapping="Wrap" Text="Veriliş Tarihi" Foreground="White" FontSize="20" VerticalAlignment="Top"/>
+        <DataGrid x:Name="Teldata" HorizontalAlignment="Left" Height="174" Margin="46,125,0,0" VerticalAlignment="Top" Width="378"/>
+        <TextBox x:Name="ttxt" HorizontalAlignment="Left" Height="24" Margin="162,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="White" TextChanged="TextBox_TextChanged" PreviewTextInput="Ttxt_PreviewTextInput"/>
+        <TextBlock HorizontalAlignment="Left" Margin="537,80,0,0" TextWrapping="Wrap" Text="ISBN NO" Foreground="White" FontSize="20" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="537,41,0,0" TextWrapping="Wrap" Text="İade Tarihi" Foreground="White" FontSize="20" VerticalAlignment="Top"/>
+        <DataGrid x:Name="isbndt" HorizontalAlignment="Left" Height="174" Margin="521,125,0,0" VerticalAlignment="Top" Width="378"/>
+        <TextBox x:Name="isbntxt" HorizontalAlignment="Left" Height="24" Margin="633,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="White" TextChanged="Isbntxt_TextChanged" PreviewTextInput="Isbntxt_PreviewTextInput"/>
+        <TextBlock HorizontalAlignment="Left" Margin="46,312,0,0" TextWrapping="Wrap" Text="Üyelerin Elindeki Kitaplar" Foreground="White" FontSize="20" VerticalAlignment="Top"/>
+        <DataGrid x:Name="Uyedtg" HorizontalAlignment="Left" Height="154" Margin="46,344,0,0" VerticalAlignment="Top" Width="853"/>
+        <Button Style="{DynamicResource DaireButoniptal}" HorizontalAlignment="Left" Margin="46,503,0,0" VerticalAlignment="Top" Width="79" Height="69" Background="White" Click="Button_Click_2"/>
+        <Button Style="{DynamicResource DaireButon}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="125,503,0,0" Height="69" Click="Button_Click_4"/>
+        <Button Style="{DynamicResource EmanetVer}" HorizontalAlignment="Left" Margin="658,503,0,0" VerticalAlignment="Top" Width="75" Height="69" Click="Button_Click_1"/>
+        <Button Style="{DynamicResource printer}" HorizontalAlignment="Left" Margin="738,503,0,0" VerticalAlignment="Top" Width="75" Height="69"/>
+        <Button Style="{DynamicResource close}" HorizontalAlignment="Left" Margin="824,503,0,0" VerticalAlignment="Top" Width="75" Height="69" Click="Button_Click"/>
+        <TextBox Background="White" HorizontalAlignment="Left" Height="23" Margin="162,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="dpv" Foreground="Black" HorizontalAlignment="Left" Margin="162,45,0,0" VerticalAlignment="Top" Width="120" Height="23" Background="#FF4B357D"/>
+        <TextBox Background="White" HorizontalAlignment="Left" Height="23" Margin="633,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="dpi" Foreground="Black" HorizontalAlignment="Left" Margin="633,41,0,0" VerticalAlignment="Top" Height="23" Width="120"/>
+        <RadioButton x:Name="rdr1" Content="Teslim Alındı" Foreground="White" HorizontalAlignment="Left" Margin="395,316,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox materialDesign:HintAssist.Hint="EmanetID" x:Name="EID" HorizontalAlignment="Left" Height="23" Margin="270,316,0,0" Background="White" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="EID_PreviewTextInput" TextChanged="EID_TextChanged"/>
+    </Grid>
+</Window>

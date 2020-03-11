@@ -1,0 +1,158 @@
+﻿<Window x:Class="girisii.KitaplariListele"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:girisii"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Title="KitaplariListele" Height="460" Width="800" Icon="icons/literature.png" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style x:Key="close" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse x:Name="Butondaire" Width="55" Height="55" Fill="White" Stroke="White" />
+                            <Image Source="icons/closedd.png" Width="33" Height="auto" ToolTip="Çıkış"/>
+                            <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Butondaire" Property="Width" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Height" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Fill" Value="#FFFAFAFA"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="sil" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse x:Name="Butondaire" Width="55" Height="55" Fill="White" Stroke="White" />
+                            <Image Source="icons/132227-200.png" Width="33" Height="auto" ToolTip="Kitap Sil"/>
+                            <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Butondaire" Property="Width" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Height" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Fill" Value="#FFFAFAFA"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="list" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse x:Name="list" Width="55" Height="55" Fill="White" Stroke="White" />
+                            <Image Source="icons/list.png" Width="33" Height="auto" ToolTip="Listele"/>
+                            <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="list" Property="Width" Value="58" />
+                                <Setter TargetName="list" Property="Height" Value="58" />
+                                <Setter TargetName="list" Property="Fill" Value="#FFFAFAFA"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="guncelle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse x:Name="Butondaire" Width="55" Height="55" Fill="White" Stroke="White" />
+                            <Image Source="icons/refresh-icon-clipart-transparent-7.png" Width="33" Height="auto" ToolTip="Kayıt Güncelle"/>
+                            <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Butondaire" Property="Width" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Height" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Fill" Value="#FFFAFAFA"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="printer" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse x:Name="Butondaire" Width="55" Height="55" Fill="White" Stroke="White" />
+                            <Image Source="icons/printer.png" Width="33" Height="auto" ToolTip="Yazdır"/>
+                            <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Butondaire" Property="Width" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Height" Value="58" />
+                                <Setter TargetName="Butondaire" Property="Fill" Value="#FFFAFAFA"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#FF4B357D">
+        <Border CornerRadius="20" Margin="20" Background="#FF23202B">
+        </Border>
+        <TextBlock Text="Bulunan Kitap Sayısı:" Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="36,387,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button HorizontalAlignment="Left" Margin="488,368,0,0" VerticalAlignment="Top" Width="74" Style="{DynamicResource list}" Height="72" Background="#FF4B357D" Click="Button_Click_1"/>
+        <DataGrid AutoGenerateColumns="True" x:Name="dtg_kitaplistesi" Foreground="Purple" Height="251" Margin="36,117,36,0" VerticalAlignment="Top"/>
+        <Label FontSize="22" x:Name="kitapsayı" HorizontalAlignment="Left" Margin="240,373,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#DDFFFFFF"/>
+        <Button Style="{DynamicResource close}" Content="" HorizontalAlignment="Left" Margin="684,368,0,0" VerticalAlignment="Top" Width="73" Height="72" Click="Button_Click"/>
+        <Button Style="{DynamicResource sil}" HorizontalAlignment="Left" Margin="620,368,0,0" VerticalAlignment="Top" Width="72" Height="72" Click="Button_Click_2"/>
+        <Button Style="{DynamicResource printer}" HorizontalAlignment="Left" Margin="423,368,0,0" VerticalAlignment="Top" Width="74" Height="72"/>
+        <Button Style="{DynamicResource guncelle}" HorizontalAlignment="Left" Margin="554,368,0,0" VerticalAlignment="Top" Width="74" Height="72" Click="Button_Click_3"/>
+        <TextBox x:Name="KID" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="Silinecek ID" Height="23" Margin="145,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="White" PreviewTextInput="KID_PreviewTextInput"/>
+        <TextBox x:Name="Ad" HorizontalAlignment="Left" Height="23" materialDesign:HintAssist.Hint="Kitap Ad" Margin="145,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="White"/>
+        <TextBox x:Name="yazar" HorizontalAlignment="Left" Height="23" materialDesign:HintAssist.Hint="Kitap Yazar" Margin="270,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="White"/>
+        <TextBox x:Name="yayınevi" HorizontalAlignment="Left" Height="23" materialDesign:HintAssist.Hint="Yayınevi" Margin="395,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="White"/>
+        <TextBox x:Name="aciklama" HorizontalAlignment="Left" Height="23" materialDesign:HintAssist.Hint="Açıklama" Margin="395,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="White"/>
+        <TextBox x:Name="ISBN" HorizontalAlignment="Left" Height="23" Margin="395,87,0,0" materialDesign:HintAssist.Hint="ISBN" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="White" PreviewTextInput="ISBN_PreviewTextInput"/>
+        <TextBox x:Name="Adet" HorizontalAlignment="Left" Height="23" Margin="520,31,0,0" materialDesign:HintAssist.Hint="Adet" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="White" PreviewTextInput="Adet_PreviewTextInput"/>
+        <TextBox x:Name="Kıd" HorizontalAlignment="Left" Height="23" Margin="145,59,0,0" materialDesign:HintAssist.Hint="Kitap ID" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="White" PreviewTextInput="Kıd_PreviewTextInput"/>
+        <TextBox x:Name="sayfa" HorizontalAlignment="Left" Height="23" Margin="270,87,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Sayfa sayısı" VerticalAlignment="Top" Width="120" Background="White" PreviewTextInput="Sayfa_PreviewTextInput"/>
+        <ComboBox x:Name="tur" FontSize="10" HorizontalAlignment="Left" Margin="520,59,0,0" VerticalAlignment="Top" Width="120" materialDesign:HintAssist.Hint="Tür" RenderTransformOrigin="0.483,-0.179" Background="White" Height="23">
+            <ComboBoxItem Name="Edebiyat">Edebiyat</ComboBoxItem>
+            <ComboBoxItem Name="Çocuk">Çocuk</ComboBoxItem>
+            <ComboBoxItem Name="Araştırma">Araştırma</ComboBoxItem>
+            <ComboBoxItem Name="Din">Din</ComboBoxItem>
+            <ComboBoxItem Name="Sanat">Sanat</ComboBoxItem>
+            <ComboBoxItem Name="Felsefe">Felsefe</ComboBoxItem>
+            <ComboBoxItem Name="Çizgi">Çizgi Roman</ComboBoxItem>
+            <ComboBoxItem Name="Bilim">Bilim</ComboBoxItem>
+            <ComboBoxItem Name="Mizah">Mizah</ComboBoxItem>
+        </ComboBox>
+        <DatePicker x:Name="date" HorizontalAlignment="Left" Margin="270,57,0,0" VerticalAlignment="Top" Width="120" Panel.ZIndex="2"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="270,57,0,0" VerticalAlignment="Top" Width="120" Background="White"/>
+        <TextBlock x:Name="sayi" HorizontalAlignment="Left" Margin="240,389,0,0" FontSize="22" TextWrapping="Wrap" Text="0" Foreground="White" VerticalAlignment="Top" Width="17" Height="27"/>
+    </Grid>
+</Window>
